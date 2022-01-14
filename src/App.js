@@ -4,9 +4,6 @@ import Page from './components/navbar/index'
 import LandingPage from './components/landingPage/index'
 import Help from './components/Help/index'
 import Booking from './components/Booking/index'
-
-
-
 import '@elastic/eui/dist/eui_theme_light.css';
 
 import {
@@ -17,10 +14,6 @@ import {
 } from "react-router-dom";
 
 
-
-const Component1 = () => {
-  return <h1>Component 1</h1>;
-};
 
 const Component2 = () => {
   return <h1>Component 2</h1>;
