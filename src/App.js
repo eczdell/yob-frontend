@@ -1,31 +1,45 @@
 import Navbar from './components/navbar/index.js'
-import { render } from "react-dom";
-import Page from './components/navbar/index'
 import LandingPage from './components/landingPage/index'
-import Help from './components/Help/index'
-import Booking from './components/Booking/index'
-import '@elastic/eui/dist/eui_theme_light.css';
+import Profile from './components/Profile/index'
+import Driver from './components/Driver/index'
+import Counter from './components/Counter/index'
+import Vehicle from './components/Vehicle/index'
+import Route from './components/Route/index'
+import Success from './components/Success/index'
+import Confirmation from './components/Confirmation/index'
+import Registration from './components/Registration/index'
+import Settings from './components/Settings/index'
+import Login from './components/Login/index'
 
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
   useRoutes,
 } from "react-router-dom";
+import Booking from './components/Booking/index.js'
+import ManageBooking from './components/ManageBooking/index.js'
 
 
-
-const Component2 = () => {
-  return <h1>Component 2</h1>;
-};
+// const Component2 = () => {
+//   return <h1>Driver 2</h1>;
+// };
 
 
 const Routing = () => {
   let routes = useRoutes([
     { path: "/", element: <LandingPage /> },
-    { path: "component2", element: <Component2 /> },
-    { path: "/booking", element: <Booking /> },
-    { path: "/help", element: <Help /> },
+    { path: "/counter", element: <Counter /> },
+    { path: "/book", element: <Booking /> },
+    { path: "/driver", element: <Driver /> },
+    { path: "/booking", element: <ManageBooking /> },
+    { path: "/route", element: <Route /> },
+    { path: "/vehicle", element: <Vehicle /> },
+    { path: "/profile", element: <Profile /> },
+    { path: "/success", element: <Success /> },
+    { path: "/confirmation", element: <Confirmation /> },
+    { path: "/profile", element: <Profile /> },
+    { path: "/settings", element: <Settings /> },
+    { path: "/sign-up", element: <Registration /> },
+    { path: "/logout", element: <Login /> },
   ]);
   return routes;
 };
@@ -35,9 +49,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div style={{ margin: "25px 20px" }}>
-        <Routing />
-      </div>
+      <Routing />
     </Router>
 
   );
